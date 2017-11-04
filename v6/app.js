@@ -33,6 +33,12 @@ passport.use(new LocalStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
+//This middleware will be calle in every route
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user
+    next()
+})
+
 //ROUTES
 app.get("/", function(req, res) {
     res.render("landing")
