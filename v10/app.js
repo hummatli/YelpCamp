@@ -4,6 +4,7 @@ var express         = require("express"),
     mongoose        = require("mongoose"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local"),
+    methodOverride  = require("method-override"),
     Campground      = require("./models/campground"),
     Comment         = require("./models/comment"),
     User            = require("./models/user"),
@@ -14,7 +15,7 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index")
 
 // Configures
-mongoose.connect("mongodb://localhost/yelp_camp_v9" , { useMongoClient: true }, function(err) {
+mongoose.connect("mongodb://localhost/yelp_camp_v10" , { useMongoClient: true }, function(err) {
     if(err) {
         console.log(err)
     } else {
@@ -26,6 +27,7 @@ mongoose.Promise = global.Promise
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/public"))
+app.use(methodOverride("_method"))
 
 // Itit DB Configuration
 //seedDB() //seed the db
