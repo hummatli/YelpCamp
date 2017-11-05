@@ -14,7 +14,7 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index")
 
 // Configures
-mongoose.connect("mongodb://localhost/yelp_camp_v8" , { useMongoClient: true }, function(err) {
+mongoose.connect("mongodb://localhost/yelp_camp_v9" , { useMongoClient: true }, function(err) {
     if(err) {
         console.log(err)
     } else {
