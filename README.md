@@ -1,7 +1,7 @@
 # YelpCamp
 Application created by NodeJS, ExpressJS, MongoDB, Bootstrap, PassportJS(for authentication).
 
-##Functionality
+## Functionality
 * App demonstarties Camp catalog. 
 * Users can authenticate
 * Users can add new camps and comments to it
