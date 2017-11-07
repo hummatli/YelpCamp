@@ -16,9 +16,8 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index")
 
 // Configures
-//var mongodbURL = "mongodb://localhost/yelp_camp_v10"
-var mongodbURL = "mongodb://sattar:sattar@ds149865.mlab.com:49865/sattar-yelp-camp"
-console.log("URL = " + process.env.DATABASEURL)
+//link format inlocal = "mongodb://localhost/yelp_camp_v10"
+//link format in mongo lab = "mongodb://<dbuser>:<dbpassword>@ds149865.mlab.com:49865/sattar-yelp-camp"
 
 mongoose.connect(process.env.DATABASEURL, { useMongoClient: true }, function(err) {
     if(err) {
