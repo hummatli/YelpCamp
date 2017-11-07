@@ -1,5 +1,5 @@
 # YelpCamp
-Application created by NodeJS, ExpressJS, MongoDB, Bootstrap, PassportJS(for authentication).
+Application created by NodeJS, ExpressJS, MongoDB, Bootstrap, PassportJS(for authentication) on my MEN stack learning process.
 
 ## Functionality
 * App demonstarties Camp catalog. 
