@@ -18,8 +18,9 @@ var commentRoutes       = require("./routes/comments"),
 // Configures
 //var mongodbURL = "mongodb://localhost/yelp_camp_v10"
 var mongodbURL = "mongodb://sattar:sattar@ds149865.mlab.com:49865/sattar-yelp-camp"
+console.log("URL = " + process.env.DATABASEURL)
 
-mongoose.connect(mongodbURL, { useMongoClient: true }, function(err) {
+mongoose.connect(process.env.DATABASEURL, { useMongoClient: true }, function(err) {
     if(err) {
         console.log(err)
     } else {
