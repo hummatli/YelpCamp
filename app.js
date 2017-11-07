@@ -18,8 +18,9 @@ var commentRoutes       = require("./routes/comments"),
 // Configures
 //link format inlocal = "mongodb://localhost/yelp_camp_v10"
 //link format in mongo lab = "mongodb://<dbuser>:<dbpassword>@ds149865.mlab.com:49865/sattar-yelp-camp"
+var dburl = process.env.DATABASEURL || /*default*/"mongodb://localhost/yelp_camp_v10"
 
-mongoose.connect(process.env.DATABASEURL, { useMongoClient: true }, function(err) {
+mongoose.connect(dburl, { useMongoClient: true }, function(err) {
     if(err) {
         console.log(err)
     } else {
